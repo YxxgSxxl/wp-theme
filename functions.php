@@ -11,5 +11,11 @@ function alex_register_assets() {
 
 }
 
+function alex_title_separator() {
+    return '|';
+}
+
 add_action('after_setup_theme', 'alex_support');
 add_action('wp_enqueue_scripts', 'alex_register_assets');
+
+add_filter('document_title_separator', 'alex_title_separator');
